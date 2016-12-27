@@ -40,7 +40,4 @@ echo -e "\n--- Install composer ---\n"
 sudo curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
-cd /var/www/kamino.loc
-sudo composer install > /dev/null 2>&1
-
 echo -e "\n--- System install complete ---\n"
