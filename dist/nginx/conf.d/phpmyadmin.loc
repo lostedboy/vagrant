@@ -1,0 +1,42 @@
+server {
+
+    listen 80;
+
+    server_name phpmyadmin.loc;
+
+    root /usr/share/phpmyadmin;
+
+    # Logging
+    error_log /var/log/phpmyadmin.loc.access_log;
+    access_log /var/log/phpmyadmin.loc.error_log;
+
+
+   location / {
+           index  index.php;
+       }
+
+       ## Images and static content is treated different
+       location ~* ^.+.(jpg|jpeg|gif|css|png|js|ico|xml)$ {
+           access_log        off;
+           expires           360d;
+       }
+
+       location ~ /\.ht {
+           deny  all;
+       }
+
+       location ~ /(libraries|setup/frames|setup/libs) {
+           deny all;
+           return 404;
+}
+
+    # Pass the PHP scripts to FastCGI server
+    location ~ \.php$ {
+
+        fastcgi_pass php;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /usr/share/phpmyadmin$fastcgi_script_name;
+        fastcgi_param  HTTPS off;
+    }
+}
