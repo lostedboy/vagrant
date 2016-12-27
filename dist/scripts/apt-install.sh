@@ -22,8 +22,8 @@ sudo apt-get install -y zip gzip tar
 sudo apt-get install -y openjdk-8-jdk openjdk-8-jre
 
 echo -e "\n--- Install php ---\n"
-sudo apt-get install -y php5-cli php-pear php5-fpm php5-dev libpcre3-dev
-sudo apt-get install -y php5-pgsql php5-sqlite php5-gd php5-xsl php5-mysql php5-curl php5-mcrypt php5-memcached php5-xsl php5-intl php5-redis
+sudo apt-get install -y php-cli php-pear php-fpm php-dev libpcre3-dev
+sudo apt-get install -y php-pgsql php-gd php-xsl php-mysql php-curl php-mcrypt php-memcached php-xsl php-intl php-redis
 
 echo -e "\n--- Install mysql and phpmyadmin ---\n"
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password pass'

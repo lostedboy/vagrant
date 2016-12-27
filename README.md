@@ -7,16 +7,16 @@ Requirements
 Software list
 -------------
 
-* PHP 5.6 (composer)
-* PHP extensions: php5-cli php-pear php5-fpm php5-dev libpcre3-dev, 
-                  php5-pgsql php5-sqlite php5-gd php5-xsl php5-mysql 
-                  php5-curl php5-mcrypt php5-memcached php5-xsl php5-intl 
-                  php5-redis
-* Mysql 5.5 (with phpmyadmin)
+* PHP 7.0.8 (composer)
+* PHP extensions: php-cli php-pear php-fpm php-dev libpcre3-dev php-pgsql 
+                  php-gd php-xsl php-mysql php-curl php-mcrypt php-memcached 
+                  php-xsl php-intl php-redis
+* Mysql 5.7 (with phpmyadmin)
 * Nginx, php-fpm
-* Nodejs, ruby, 
+* Nodejs, npm, ruby
 * Memcached, redis
 * Openjdk 8
+* Curl, git
 
 Installation
 ------------
