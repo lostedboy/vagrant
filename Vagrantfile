@@ -9,11 +9,6 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
 
   config.vm.provision "shell", path: "dist/scripts/apt-install.sh"
-  config.vm.provision "shell", path: "dist/scripts/nginx-config.sh"
 
   config.vm.hostname = "vagrant.loc"
-  config.hostsupdater.aliases = [
-    "phpmyadmin.loc"
-  ]
-
 end
