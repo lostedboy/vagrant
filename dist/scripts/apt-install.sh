@@ -17,4 +17,7 @@ echo -e "\n--- Install utilities ---\n"
 sudo apt-get install -y curl git
 sudo apt-get install -y zip gzip tar
 
+echo -e "\n--- Install python3 ---\n"
+sudo apt-get install python3
+
 echo -e "\n--- System install complete ---\n"
